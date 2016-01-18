@@ -1,6 +1,6 @@
 <?php
     include "./config.inc.php";
-
+    
     session_start();
     $existed = 0;
 
