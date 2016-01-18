@@ -4,6 +4,7 @@ error_reporting(E_ALL);
     session_start();
 
     $word = $_GET['word'];
+    $word = strtolower($word);
     $command = $_GET['command'];
 
     $query_prefix = 'http://tw.websaru.com/display.php?action=search&word=';
