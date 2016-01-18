@@ -142,18 +142,6 @@
 
     <div id="main">
 
-    <h1>Countdown Clock</h1>
-    <div id="clockdiv">
-        <div>
-            <span class="minutes"></span>
-            <div class="smalltext">Minutes</div>
-        </div>
-        <div>
-            <span class="seconds"></span>
-            <div class="smalltext">Seconds</div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header>
         <div class="container game-container">
