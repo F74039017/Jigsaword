@@ -17,26 +17,6 @@
   <link rel="stylesheet" href="css/stylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      // declare 2D array
-      var map = new Array(4);
-      for(var i=0; i<4; i++)
-        map[i] = new Array(4);
-
-      for(var i=0; i<4; i++)
-        for(var j=0; j<4; j++)
-          map[i][j] = i+j;
-
-      console.debug(map);
-      $.get( "modifyMap.php",{
-          map: map
-        }, function(data, status){
-           var con = $.parseJSON(data);
-           console.debug(con);
-        });
-    });
-  </script>
 </head>
 
 <body>

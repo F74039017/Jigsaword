@@ -1,0 +1,8 @@
+#score_container {
+	height: 75vh;
+	overflow-y: auto;
+}
+
+#score_container tbody{
+	height: 60vh;
+}
