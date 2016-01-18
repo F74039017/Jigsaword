@@ -1,3 +1,7 @@
+	<link href="css/block.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
 <?php 
 	session_start();
  ?>
@@ -26,21 +30,30 @@
 	});
 </script>
 
-<div class="container">
-	<h1>Rank</h1>
-	<div id="score_container">
-		<table class="table">
-			<thead>
-				<tr>
-					<th class="col-md-1">Rank</th>
-					<th class="col-md-2">Name</th>
-					<th class="col-md-2">Last Score</th>
-					<th class="col-md-2">Highest Score</th>
-				</tr>
-			</thead>
-			<tbody id="rank_list">
-				<!-- load by ajax -->
-			</tbody>
-		</table>
-	</div>
-</div>
+
+	<header>
+		<div class="container game-container">
+        <div class="row">
+        	<div class="game-title">
+                <h1>Score</h1>
+                <hr class="star-light">
+            </div>
+
+            <div class="game-table">
+			    <table class="table">
+					<thead>
+						<tr>
+							<th class="col-md-1">Rank</th>
+							<th class="col-md-2">Name</th>
+							<th class="col-md-2">Last Score</th>
+							<th class="col-md-2">Highest Score</th>
+						</tr>
+					</thead>
+					<tbody id="rank_list">
+						<!-- load by ajax -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</div>
+    </header>

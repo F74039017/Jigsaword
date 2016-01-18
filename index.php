@@ -1,5 +1,6 @@
 <?php
   include('login.php');
+  include('registeraccount.php');
   if($_SESSION['login_user']!="wrong"){ // check login error
     $_SESSION['login_user'] = "";
   }
@@ -15,6 +16,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -62,11 +64,11 @@
                     <img class="img-responsive" src="img/profile.png" alt="">
                     <div class="intro-text">
                         <span class="name">Word is power!</span>
+                        <br>
                         <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
-                            <a href="#signin" class="btn btn-lg btn-outline">
-                                <i class="fa"></i>SIGN IN
-                            </a>
+                            <a href="#signin" class="btn-outline btn-lg">SIGN IN</a>
                         </div>
+                        <br>
                         <hr class="star-light">
                         <span class="skills">Find out more and more words as you can!</span>
                     </div>
@@ -105,7 +107,7 @@
                         <br>
                         <div class="col-lg-8 col-lg-offset-2 text-center">
                             <div class="form-group col-xs-12">
-                                <input name="submit" type="submit" class="btn btn-inline btn-lg" id="submit" value="Sign in">
+                                <input name="submit" type="submit" class="btn-inline btn-lg" id="submit" value="Sign in">
                             </div>
                         </div>
                     </form>
@@ -145,32 +147,32 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form name="sentMessage" id="contactForm" method="post">
+                    <form name="sentMessage" id="contactForm" action="registeraccount.php" method="post">
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                <input name="username" type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <input name="email" type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your phone number.">
+                                <input name="password" type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Confirm password</label>
-                                <input type="password" class="form-control" placeholder="Confirm password" id="password" required data-validation-required-message="Please enter your phone number.">
+                                <input name="confirmpassword" type="password" class="form-control" placeholder="Confirm password" id="password" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -178,8 +180,8 @@
                         <div id="register"></div>
                         <div class="col-lg-8 col-lg-offset-2 text-center">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-inline btn-send btn-lg">Send</button>
-                                <button type="reset" class="btn btn-inline btn-lg">Clear</button>
+                                <input name="submit" type="submit" class="btn-inline btn-lg" id="submit" value="Send">
+                                <input name="clear" type="reset" class="btn-inline btn-lg" id="clear" value="Clear">
                             </div>
                         </div>
                     </form>

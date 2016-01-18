@@ -18,6 +18,9 @@ $(document).ready(function(){
         else if(tab_name == "Develop") {
             $("#main_container").load("develop.php");
         }
+        else if(tab_name == "Sign out") {
+            window.location.assign("index.php");
+        }
         last_tab = $(this).parent();
         last_tab.removeClass("passive").addClass("active");
     });

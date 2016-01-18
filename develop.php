@@ -1,77 +1,87 @@
 <!-- use matrix.css for temp -->
-<link rel="stylesheet" type="text/css" href="css/matrix.css">
-<link rel="stylesheet" type="text/css" href="css/favorite.css">
-<script type="text/javascript">
+	<link href="css/block.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/block.css" rel="stylesheet">
 	
-</script>
-<style type="text/css">
-	/*not require*/
- 	#game_container {
-   		margin-top: 5vh;
-   		margin-left: 7vw;
- 	}
+	<script type="text/javascript">
+	
+	</script>
 
- 	.square {
- 		border: 1px solid black;
- 	}
+	<style type="text/css">
+		/*not require*/
+	 	#game_container {
+	   		margin-top: 5vh;
+	   		margin-left: 7vw;
+	 	}
 
- 	input {
- 		background-color: "blue";
- 	}
-</style>
+	 	.block {
+	 		border: 1px solid black;
+	 	}
 
-<form>
-	<div class="card card-container">
-	    <p id="subtitle">New Map</p>
-		<div id="game_container">
-    <div class="square1 square" id="s00">
-    	<h1>A</h1>
-	</div>
-	<div class="square1 square" id="s01">
-	  <h1>B</h1>
-	</div>
-	<div class="square1 square" id="s02">
-	  <h1>C</h1>
-	</div>
-	<div class="square1 square" id="s03">
-	  <h1>D</h1>
-	</div><br>
-	<div class="square2 square" id="s10">
-	  <h1>E</h1>
-	</div>
-	<div class="square2 square" id="s11">
-	  <h1>F</h1>
-	</div>
-	<div class="square2 square" id="s12">
-	  <h1>G</h1>
-	</div>
-	<div class="square2 square" id="s13">
-	  <h1>H</h1>
-	</div><br>
-	<div class="square3 square" id="s20">
-	  <h1>I</h1>
-	</div>
-	<div class="square3 square" id="s21">
-	  <h1>J</h1>
-	</div>
-	<div class="square3 square" id="s22">
-	  <h1>K</h1>
-	</div>
-	<div class="square3 square" id="s23">
-	  <h1>L</h1>
-	</div><br>
-	<div class="square4 square" id="s30">
-	  <h1>M</h1>
-	</div>
-	<div class="square4 square" id="s31">
-	  <h1>N</h1>
-	</div>
-	<div class="square4 square" id="s32">
-	  <h1>O</h1>
-	</div>
-	<div class="square4 square" id="s33">
-	  <h1>P</h1>
-	</div><br><br>
-	    
-	</div><!-- /card-container -->
-</form>
+	 	input {
+	 		background-color: "blue";
+	 	}
+	</style>
+
+	<header>
+		<div class="container game-container">
+        <form>
+        	<div class="game-title">
+                <h1>New map</h1>
+                <hr class="star-light">
+            </div>
+
+            <div class="game-table">
+			    <div class="block1 block" id="s00">
+			    	<h1>A</h1>
+				</div>
+				<div class="block1 block" id="s01">
+				  	<h1>B</h1>
+				</div>
+				<div class="block1 block" id="s02">
+				  	<h1>C</h1>
+				</div>
+				<div class="block1 block" id="s03">
+				  	<h1>D</h1>
+				</div><br>
+				<div class="block2 block" id="s10">
+				  	<h1>E</h1>
+				</div>
+				<div class="block2 block" id="s11">
+				  	<h1>F</h1>
+				</div>
+				<div class="block2 block" id="s12">
+				  	<h1>G</h1>
+				</div>
+				<div class="block2 block" id="s13">
+				  	<h1>H</h1>
+				</div><br>
+				<div class="block3 block" id="s20">
+				  	<h1>I</h1>
+				</div>
+				<div class="block3 block" id="s21">
+				  	<h1>J</h1>
+				</div>
+				<div class="block3 block" id="s22">
+				  	<h1>K</h1>
+				</div>
+				<div class="block3 block" id="s23">
+				  	<h1>L</h1>
+				</div><br>
+				<div class="block4 block" id="s30">
+				  	<h1>M</h1>
+				</div>
+				<div class="block4 block" id="s31">
+				  	<h1>N</h1>
+				</div>
+				<div class="block4 block" id="s32">
+				  	<h1>O</h1>
+				</div>
+				<div class="block4 block" id="s33">
+				  	<h1>P</h1>
+				</div><br><br>
+			</div>
+		</form>
+		</div>
+    </header>

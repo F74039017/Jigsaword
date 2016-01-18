@@ -6,128 +6,137 @@
 
 <html lang="en">
 <head>
-  <title>Bookmark</title>
+  <title>Jigsawords</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="register.css">
-  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/register.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
+<body id="page-top" class="index">
 
-      <a class="navbar-brand" href="index.php">Bookmark</a>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">JIGSAWORDS</a>
+            </div>
 
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a class="navbar-link" href="register.php">Register</a></li>
-      </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-page page-scroll">
+                        <a href="index.php">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="navbar-link" href="index.php"><span class="glyphicon glyphicon-flag"></span> Sign in</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
+    <header>
+        <div class="container card-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p id="success">Successfully!</p>
+                    <hr class="star-light">
+                    <br>
+                    <span id="reauth-email" class="reauth-email"></span>  
+                    <table class="account-table">
+                    <tbody>
+                      <tr>
+                        <td><p id="hint"> Name</p></td>
+                        <td class="content">
+                          <p class="account account-name">
+                          <?php
+                            include "./config.inc.php";
+               
+                            $register = $_SESSION['register_user'];
 
-<div class="container">
-  <div class="card card-container">
-    <p id="success">Register Successfully!</p>
-    <span id="reauth-email" class="reauth-email"></span>  
+                            $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
+                            $row = mysql_fetch_array($query);
 
-    <table>
-      <tbody>
-        <tr>
-          <td><p id="hint"> Name</p></td>
-          <td id="content-name">
-            <p class="account account-name">
-            <?php
-              include "./config.inc.php";
- 
-              $register = $_SESSION['register_user'];
+                            echo $row['name'];
+                          ?>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p id="hint"> Password</p></td>
+                        <td class="content">
+                          <p class="account account-password">
+                          <?php
+                            include "./config.inc.php";
+                            $register = $_SESSION['register_user'];
 
-              $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
-              $row = mysql_fetch_array($query);
+                            $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
+                            $row = mysql_fetch_array($query);
 
-              echo $row['name'];
-            ?>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><p id="hint"> Password</p></td>
-          <td id="content-password">
-            <p class="account account-password">
-            <?php
-              include "./config.inc.php";
-              $register = $_SESSION['register_user'];
+                            echo $row['password'];
+                          ?>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p id="hint"> Email</p></td>
+                        <td class="content">
+                          <p class="account account-email">
+                          <?php
+                            include "./config.inc.php";
+                            $register = $_SESSION['register_user'];
 
-              $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
-              $row = mysql_fetch_array($query);
+                            $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
+                            $row = mysql_fetch_array($query);
 
-              echo $row['password'];
-            ?>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><p id="hint"> Email</p></td>
-          <td>
-            <p class="account account-email">
-            <?php
-              include "./config.inc.php";
-              $register = $_SESSION['register_user'];
+                            echo $row['email'];
+                          ?>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p id="hint"> Register</p></td>
+                        <td class="content">
+                          <p class="account">
+                          <?php
+                            include "./config.inc.php";
 
-              $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
-              $row = mysql_fetch_array($query);
+                            $register = $_SESSION['register_user'];
 
-              echo $row['email'];
-            ?>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><p id="hint"> Register</p></td>
-          <td>
-            <p class="account">
-            <?php
-              include "./config.inc.php";
+                            $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
+                            $row = mysql_fetch_array($query);
 
-              $register = $_SESSION['register_user'];
-
-              $query = mysql_query("SELECT * FROM user WHERE email = '$register'", $link);
-              $row = mysql_fetch_array($query);
-
-              echo $row['register'];
-            ?>
-            </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <button name="submit" class="btn btn-lg btn-primary btn-block btn-register" id="submit" type="submit" onclick="signin()">Sign in</button>
-    <script>
-      function signin() {
-        window.location = "index.php";
-      }
-    </script>
-  </div><!-- /card-container -->
-</div><!-- /container -->
+                            echo $row['register'];
+                          ?>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+                  <button name="submit" class="btn btn-outline btn-lg btn-primary btn-block btn-register" id="submit" type="submit" onclick="signin()">Sign in</button>
+                  <script>
+                    function signin() {
+                      window.location = "index.php";
+                    }
+                  </script>
+                </div>
+            </div>
+        </div>
+    </header>
 
 <footer class="container-fluid text-center">
     <div class='footer-copyright'>
