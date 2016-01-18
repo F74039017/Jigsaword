@@ -7,6 +7,8 @@
             const default_bg = "#18bc9c";
             const pressed_bg = "#fff";
 
+            var word_history = [];
+
             var leftButtonDown = false;
 
             var used = new Array(16);
@@ -89,7 +91,24 @@
                     word += track[i].letter;
                 }
                 
-                $("#select_word").html(word);
+                if(word.length<3) {
+                    $("#select_word").html(word);
+                    $("#select_word").css("color", "red");
+                }
+                else {
+                    $.get( "dictionary.php",{
+                            command: "exist",
+                            word: word
+                        }, function(data, status){
+                            if(data=="true") {
+                                $("#select_word").css("color", "green");
+                                word_history.push(word);
+                            }
+                            else
+                                $("#select_word").css("color", "red");
+                            $("#select_word").html(word);
+                        });
+                }
 
                 cleanSelect();
             });
@@ -153,16 +172,16 @@
 
                 <div class="game-table">
                     <div class="block1 block" id="s00">
-                        <h1>A</h1>
+                        <h1>N</h1>
                     </div>
                     <div class="block1 block" id="s01">
-                        <h1>B</h1>
+                        <h1>A</h1>
                     </div>
                     <div class="block1 block" id="s02">
-                        <h1>C</h1>
+                        <h1>M</h1>
                     </div>
                     <div class="block1 block" id="s03">
-                        <h1>D</h1>
+                        <h1>E</h1>
                     </div><br>
                     <div class="block2 block" id="s10">
                         <h1>E</h1>
