@@ -110,7 +110,7 @@ $(function() {
             var ans = map_info.answer;
             for(var i=0; i<ans.length; i++)
                 if(ans[i]==word) {
-                    exist_reponse();
+                    exist_reponse(word);
                     cleanSelect();
                     return true;
                 }
@@ -121,7 +121,7 @@ $(function() {
                 word: word
             }, function(data, status) {
                 if(data=="true") {
-                    exist_reponse();
+                    exist_reponse(word);
                     $.post( "modifyMap.php",{
                             command: "update_ans",
                             answer: word,
@@ -136,7 +136,8 @@ $(function() {
                 $("#select_word").html(word);
             });
 
-            function exist_reponse () {
+            function exist_reponse (word) {
+                $("#select_word").html(word);
                 $("#select_word").css("color", "green");
                         
                 if($("#word-list").val()=="") {
