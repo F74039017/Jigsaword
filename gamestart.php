@@ -19,7 +19,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
                         <div class="form-group col-xs-12 animsition" id="game-start">
-                            <a class="btn btn-outline btn-lg btn-start" id="game_start_btn" href="#">Start!</a>
+                            <a class="btn btn-outline btn-lg btn-start" id="game_start_btn" href="#">Start</a>
                             <a class="btn btn-outline btn-lg btn-start" id="blank_btn" href="#" style="visibility: hidden;">Blank</a>
                             <a class="btn btn-outline btn-lg btn-start" id="rule_btn" href="#">Rule</a>
                         </div>

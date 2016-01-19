@@ -21,7 +21,7 @@
             <table id="other-table">
                 <tr>
                     <td id="clock_tab">Left time</td>
-                    <td id="clock_pill"><span id="clock">02:00</span></td>
+                    <td id="clock_pill"><span id="clock">00:02</span></td>
 
                     <td id="score_tab">Score</td>
                     <td id="score_pill">0</td>

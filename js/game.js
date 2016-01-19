@@ -207,8 +207,8 @@ $(function() {
 });
 
 function countdown(minutes) {
-    var seconds = 60;
-    var mins = minutes;
+    var seconds = 2;
+    var mins = 0;
 
     function tick() {
         var counter = document.getElementById("clock");
@@ -234,4 +234,4 @@ function gameover () {
     $("#main_container").load("gameover.php");
 }
 
-countdown(2);
+countdown(1);
