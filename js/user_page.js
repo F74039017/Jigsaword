@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     $("#title_link").click(function() {
         last_tab.removeClass("active").addClass("passive");
-        $("#main_container").load("gamestart.php");
+        $("#main_container").load("game.php");
 
         last_tab = $("#game_tab");
         $("#game_tab").removeClass("passive").addClass("active");
