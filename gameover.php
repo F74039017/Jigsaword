@@ -19,7 +19,11 @@
                         <form role="form">
                             <div class="panel">
                                 <div class="panel-heading">History list</div>
-                                <textarea class="form-control" rows="20" id="word-list" readOnly></textarea>
+                                <textarea class="form-control" rows="20" id="word-list" readOnly>
+                                	<?php 
+                                		echo '"' . trim($_REQUEST['wordlist']) . '"';
+                                	 ?>
+                                </textarea>
                             </div>
                         </form>
                     </td>
@@ -27,7 +31,11 @@
                     <td class="curr_score">
                         <div class="panel">
                             <div class="panel-heading">Score</div>
-                            <div class="panel-body" id="curr_score"></div>
+                            <div class="panel-body" id="curr_score">
+                            	<?php 
+                            		echo $_REQUEST['score'];
+                            	 ?>
+                            </div>
                         </div>
                     </td>
                 </tr>
@@ -43,7 +51,11 @@
                     <td class="new_record">
                         <div class="panel">
                             <div class="panel-heading">New Record</div>
-                            <div class="panel-body" id="new_record"></div>
+                            <div class="panel-body" id="new_record">
+                            	<?php 
+                            		echo $_REQUEST['new_record'];
+                            	 ?>
+                            </div>
                         </div>
                     </td>
                 </tr>

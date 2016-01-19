@@ -207,7 +207,7 @@ $(function() {
 });
 
 function countdown(minutes) {
-    var seconds = 5;
+    var seconds = 20;
     var mins = 0;
 
     function tick() {
@@ -232,14 +232,24 @@ function countdown(minutes) {
 
 function gameover () {
     var score = $("#score_pill").html();
+    var wordlist = $("#word-list").html();
+    var new_record = "";
     $.post( "modifyPersonal.php",{
             command: "update_score",
             score: score
         }, function(data, status){
-             
+            if(data=="true") {
+                new_record = "O";
+            }
+            else {
+                new_record = "X";
+            }
+            $("#main_container").load("gameover.php", {
+                score: score,
+                new_record: new_record,
+                wordlist: wordlist
+            });
         });
-
-    $("#main_container").load("gameover.php");
 }
 
 countdown(1);
