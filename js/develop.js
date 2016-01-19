@@ -20,4 +20,9 @@ $(document).ready(function(){
 				 $("#develop_success_alert").show(400);
 			});
 	});
+
+	$(".matrix_element").blur(function(){
+		var ch = $(this).val();
+		$(this).val(ch.toUpperCase());
+	});
 });
