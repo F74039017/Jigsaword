@@ -1,10 +1,11 @@
 
 $(function() {
+    var map_info;
     /* init map */
     $.post( "modifyMap.php",{
             command: "get"
         }, function(data, status){
-             var map_info = $.parseJSON(data);
+             map_info = $.parseJSON(data);
              var k=0;
              for(var i=0; i<4; i++)
                 for(var j=0; j<4; j++)
@@ -87,7 +88,7 @@ $(function() {
         }
     });
                     
-    $(document).mouseup(function(e) {
+    $("#game_header").mouseup(function(e) {
         // Left mouse button was released, clear flag
         if (e.which === 1) 
             leftButtonDown = false;
@@ -104,34 +105,55 @@ $(function() {
             $("#select_word").css("color", "red");
         }
         else {
+            /* check map cache */
+            var ans = map_info.answer;
+            for(var i=0; i<ans.length; i++)
+                if(ans[i]==word) {
+                    exist_reponse();
+                    return true;
+                }
+
+            /* lookup dictionary */
             $.get( "dictionary.php", {
                 command: "exist",
                 word: word
             }, function(data, status) {
                 if(data=="true") {
-                    $("#select_word").css("color", "green");
-                    
-                    var add_score = 0;
-                    if($("#word-list").val()=="") {
-                        $("#word-list").append(word);
-                        add_score += 13*word.length;
-                    }
-                    else {
-                        if(word_history.indexOf(word)==-1) {    // not used before
-                            $("#word-list").append("\n"+word);
-                            $("#word-list").animate({
-                                scrollTop:$("#word-list")[0].scrollHeight - $("#word-list").height()},400);
-                            add_score += 13*word.length;
-                        }
-                    }
-                    $("#score_pill").html(add_score);
-                    word_history.push(word);
+                    exist_reponse();
+                    $.post( "modifyMap.php",{
+                            command: "update_ans",
+                            answer: word,
+                            id: map_info.id
+                        }, function(data, status){
+                             //Call back
+                        });
                 }
                 else
                     $("#select_word").css("color", "red");
-                
+
                 $("#select_word").html(word);
             });
+
+            function exist_reponse () {
+                $("#select_word").css("color", "green");
+                        
+                var add_score = 0;
+                if($("#word-list").val()=="") {
+                    $("#word-list").append(word);
+                    add_score += 13*word.length;
+                }
+                else {
+                    if(word_history.indexOf(word)==-1) {    // not used before
+                        $("#word-list").append("\n"+word);
+                        $("#word-list").animate({
+                            scrollTop:$("#word-list")[0].scrollHeight - $("#word-list").height()},400);
+                        add_score += 13*word.length;
+                    }
+                }
+                $("#score_pill").html(add_score);
+                word_history.push(word);
+            }
+
         }
 
         cleanSelect();

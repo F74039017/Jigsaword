@@ -1,7 +1,7 @@
 <?php 
 // ini_set('display_errors', 'On');
 // error_reporting(E_ALL);
-    include "./dic_word_func.php";
+    include "./dic_map_func.php";
     session_start();
 
     $word = $_GET['word'];

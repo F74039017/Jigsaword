@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/game.js"></script>
 
 <!-- Header -->
-<header>
+<header id="game_header">
     <div class="container game-container" display="none">
         <div class="row">
             <div class="game-title">

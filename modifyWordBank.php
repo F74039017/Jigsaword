@@ -2,7 +2,6 @@
 // ini_set('display_errors', 'On');
 // error_reporting(E_ALL);
     include "./config.inc.php";
-    include "./dic_word_func.php";
 
     session_start();
     $command = $_POST['command'];	// add and get
