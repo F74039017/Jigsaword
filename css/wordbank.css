@@ -1,12 +1,9 @@
-.col-md-1,
-.col-md-2 {
-	font-size: 1.5em;
-	font-weight: bold;
-	text-align: center;
+table {
+	border-color: #000;
 }
 
 th {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	text-align: center;
 	background-color: rgba(255, 255, 255, 0.4);
@@ -17,15 +14,26 @@ td {
 	text-align: center;
 }
 
-tbody {
-	font-size: 1.2em;
-	text-align: center;
+.word,
+.speech,
+.chinese,
+.addedtime, {
+	padding-top: 5vh;
+}
+
+.wordrow {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
 	-webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
-tbody:hover {
+.wordrow:hover {
 	color: black;
 	font-weight: bold;
+}
+
+#btn-dele {
+	font-size: 1em;
 }

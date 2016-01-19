@@ -34,7 +34,3 @@
         </div>
     </div>
 </header>
-
-<div class="container" id="main_container">
-    <!-- load by AJAX -->
-</div><!-- /container -->

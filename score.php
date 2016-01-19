@@ -1,11 +1,8 @@
-	<link href="css/block.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/score.css">
 
 <?php 
 	session_start();
  ?>
-<link rel="stylesheet" type="text/css" href="css/score.css">
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -30,16 +27,16 @@
 	});
 </script>
 
-	<header>
-		<div class="container game-container">
-        <div class="row">
+<header>
+	<div class="container game-container">
+       <div class="row">
         	<div class="game-title">
                 <h1>Score</h1>
                 <hr class="star-light">
             </div>
 
             <div class="game-table">
-			    <table class="table">
+			    <table class="table table-hover">
 					<thead>
 						<tr>
 							<th class="col-md-1">Rank</th>
@@ -54,5 +51,5 @@
 				</table>
 			</div>
 		</div>
-		</div>
-    </header>
+	</div>
+</header>

@@ -20,7 +20,7 @@ $(document).ready(function() {
         overlayClass : 'animsition-overlay-slide',
         overlayParentElement : 'body',
         transition: function(url) { 
-        	$("#main_container").load("game.php");
+        	$('#main_container').load("game.php");
         }
     });
 });
