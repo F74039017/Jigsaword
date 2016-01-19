@@ -110,6 +110,7 @@ $(function() {
             for(var i=0; i<ans.length; i++)
                 if(ans[i]==word) {
                     exist_reponse();
+                    cleanSelect();
                     return true;
                 }
 
