@@ -29,6 +29,16 @@
     		mysql_query("UPDATE `wordbank` SET `wordlist`= '$en_merge' WHERE username='$username'", $link);
     	}
     }
+    else if($command=="delete") {
+        $word = $_POST['word'];
+        $query = mysql_query("SELECT wordlist FROM wordbank WHERE username='$username'");
+        $words = mysql_fetch_array($query)['wordlist'];
+        $words = json_decode($words);
+        $key = array_search($word, $words);
+        array_splice($words, $key, 1);
+        $words = json_encode($words);
+        mysql_query("UPDATE `wordbank` SET `wordlist`= '$words' WHERE username='$username'", $link);
+    }
     else {
     	echo "No such commnad";
     }
