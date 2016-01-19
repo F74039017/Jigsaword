@@ -2,14 +2,6 @@
 	border: 1px solid black;
 }
 
-<<<<<<< HEAD
-.alphabet {
-	margin-top: 10px;
-}
-
-#submit {
-  font-size: 2em;
-=======
 .game-table input[type="text"] {
     background: transparent;
     border: none;
@@ -24,5 +16,4 @@
 	margin-left: 35vh;
 	margin-top: 2vh;
 	display: none;
->>>>>>> 2fc985e3707fef55b71465982259091ae11ed10e
 }

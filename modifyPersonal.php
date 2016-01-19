@@ -6,12 +6,16 @@
     $email = $_SESSION['login_user'];
 
     if($command=="get") {
-    	$query = mysql_query("SELECT `name`, `register` FROM `user` WHERE `name` = '$name'");
+    	$query = mysql_query("SELECT `name`, `register` FROM `user` WHERE `email` = '$email'");
         $result = mysql_fetch_array($query);
         $ret = new StdClass();
         $ret->name = $result['name'];
         $ret->register = $result['register'];
         $ret->email = $email;
+        $query = mysql_query("SELECT `lscore`, `hscore` FROM `rank` WHERE `name`='$ret->name'");
+        $result = mysql_fetch_array($query);
+        $ret->lscore = $result['lscore'];
+        $ret->hscore = $result['hscore'];
         echo json_encode($ret);
     }
     else if($command=="update_pwd") {
