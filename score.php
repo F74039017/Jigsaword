@@ -30,7 +30,6 @@
 	});
 </script>
 
-
 	<header>
 		<div class="container game-container">
         <div class="row">

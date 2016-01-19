@@ -2,10 +2,10 @@
     include "./config.inc.php";
 
     session_start();
-    $command = $_GET['command'];	// add and get
+    $command = $_POST['command'];	// add and get
 
     if($command=="get") {
-    	$id = $_GET['id'];
+    	$id = $_POST['id'];
     	$maps;
     	$query = mysql_query("SELECT matrix FROM map");
         while($result = mysql_fetch_array($query)) {
@@ -17,7 +17,7 @@
         echo $maps[$rand];
     }
     else if($command=="add") {
-	    $map = $_GET['map'];
+	    $map = $_POST['map'];
 	    $en_map = json_encode($map);
 	    mysql_query("INSERT INTO map(matrix) VALUES ('$en_map')", $link);
 	    echo mysql_errno($link) . ": " . mysql_error($link). "\n";
