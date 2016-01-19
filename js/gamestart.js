@@ -1,4 +1,5 @@
 $(document).ready(function() {
+<<<<<<< HEAD
     $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
@@ -22,5 +23,9 @@ $(document).ready(function() {
         transition: function(url) { 
         	$('#main_container').load("game.php");
         }
+=======
+    $("#game_start_btn").click(function(){
+        $("#main_container").load("game.php");
+>>>>>>> cad07d49c5cd55ea184ae033a452bc62bcc78917
     });
 });
