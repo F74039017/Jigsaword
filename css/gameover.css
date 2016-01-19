@@ -7,7 +7,7 @@
 .row {
   display: inline-block;
   background-color: transparent;
-  margin-top: -10em;
+  margin-top: -5em;
 }
 
 .list-panel {
@@ -22,9 +22,8 @@
 }
 
 .curr_score,
-.curr_rank,
 .best_score,
-.best_rank {
+.new_record {
   width: 8em;
   font-weight: bold;
   font-size: 1.5em;

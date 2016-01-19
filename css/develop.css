@@ -13,3 +13,9 @@
 	margin-top: 2vh;
 	display: none;
 }
+
+.row {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: -5em;
+}

@@ -15,85 +15,72 @@
                 <hr class="star-light">
             </div>
 
-            <table>
-            	<tr>
-            		<td rowspan="2">
-            			<div class="game-table" id="develop_table">
-						    <div class="block1 block" id="s00">
-						    	<input name="a00" type="text" id="a00" class="form-control matrix_element" maxlength="1" required>
-							</div>	
-							<div class="block1 block" id="s01">
-							  	<input name="a01" type="text" id="a01" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block1 block" id="s02">
-							  	<input name="a02" type="text" id="a02" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block1 block" id="s03">
-							  	<input name="a03" type="text" id="a03" class="form-control matrix_element" maxlength="1" required>
-							</div><br>
-							<div class="block2 block" id="s10">
-							  	<input name="a10" type="text" id="a10" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block2 block" id="s11">
-							  	<input name="a11" type="text" id="a11" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block2 block" id="s12">
-							  	<input name="a12" type="text" id="a12" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block2 block" id="s13">
-							  	<input name="a13" type="text" id="a13" class="form-control matrix_element" maxlength="1" required>
-							</div><br>
-							<div class="block3 block" id="s20">
-							  	<input name="a20" type="text" id="a20" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block3 block" id="s21">
-							  	<input name="a21" type="text" id="a21" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block3 block" id="s22">
-							  	<input name="a22" type="text" id="a22" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block3 block" id="s23">
-							  	<input name="a23" type="text" id="a23" class="form-control matrix_element" maxlength="1" required>
-							</div><br>
-							<div class="block4 block" id="s30">
-							  	<input name="a30" type="text" id="a30" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block4 block" id="s31">
-							  	<input name="a31" type="text" id="a31" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block4 block" id="s32">
-							  	<input name="a32" type="text" id="a32" class="form-control matrix_element" maxlength="1" required>
-							</div>
-							<div class="block4 block" id="s33">
-							  	<input name="a33" type="text" id="a33" class="form-control matrix_element" maxlength="1" required>
-							</div><br><br>
-						</div>
-            		</td>
 
-            		<td id="blank"></td>
-
-            		<td>
-            			<div class="form-group col-xs-12">
-            				<button name="edit" id="btn-new" type="button" class="btn btn-inline btn-warning">Add</button>
-            				<button name="edit" id="btn-del" type="button" class="btn btn-inline btn-warning">Delete</button>
-            			</div>
-        
-			            <script>
-			            $(document).ready(function() {
-			            	$i = 0;
-
-			                $("#btn-new").click(function() {
-				                $("#blank").append('<input name="answer[]" type="text" id="inputAnswer'+ $i +'" class="form-control" placeholder="Answer" required autofocus>');
-			                });
-
-			                $("#btn-del").click(function() {
-				                $("#blank").append('<input name="answer[]" type="text" id="inputAnswer'+ $i +'" class="form-control" placeholder="Answer" required autofocus>');
-			                });
-			             });
-			            </script>
-            		</td>
-            	</tr>
-            </table>
+            <div class="game-table" id="develop_table">
+				<div class="block1 block" id="s00">
+					<input name="a00" type="text" id="a00" class="form-control matrix_element" maxlength="1" required>
+				</div>	
+				
+				<div class="block1 block" id="s01">
+					<input name="a01" type="text" id="a01" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block1 block" id="s02">
+					<input name="a02" type="text" id="a02" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block1 block" id="s03">
+					<input name="a03" type="text" id="a03" class="form-control matrix_element" maxlength="1" required>
+				</div><br>
+				
+				<div class="block2 block" id="s10">
+					<input name="a10" type="text" id="a10" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block2 block" id="s11">
+					<input name="a11" type="text" id="a11" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block2 block" id="s12">
+					<input name="a12" type="text" id="a12" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block2 block" id="s13">
+					<input name="a13" type="text" id="a13" class="form-control matrix_element" maxlength="1" required>
+				</div><br>
+				
+				<div class="block3 block" id="s20">
+					<input name="a20" type="text" id="a20" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block3 block" id="s21">
+					<input name="a21" type="text" id="a21" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block3 block" id="s22">
+					<input name="a22" type="text" id="a22" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block3 block" id="s23">
+					<input name="a23" type="text" id="a23" class="form-control matrix_element" maxlength="1" required>
+				</div><br>
+				
+				<div class="block4 block" id="s30">
+					<input name="a30" type="text" id="a30" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block4 block" id="s31">
+					<input name="a31" type="text" id="a31" class="form-control matrix_element" maxlength="1" required>	
+				</div>
+				
+				<div class="block4 block" id="s32">
+				  	<input name="a32" type="text" id="a32" class="form-control matrix_element" maxlength="1" required>
+				</div>
+				
+				<div class="block4 block" id="s33">
+					<input name="a33" type="text" id="a33" class="form-control matrix_element" maxlength="1" required>
+				</div><br><br>
+			</div>
 
 			<button name="update" class="btn-outline btn-lg" id="submit" type="submit">Send</button>
 			</form>

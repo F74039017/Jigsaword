@@ -1,5 +1,5 @@
   <?php
-	include('changpassword.php'); 
+	include('changepassword.php'); 
   ?>
 
 	<link href="css/block.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 					  </tr>
 
 					  <tr>
-						<td><p> Email</p></td>
+						<td><p id="hint"> Email</p></td>
 						<td class="content">
 						  <p class="account account-email" id="account_email">
 							<!-- AJAX post method -->
@@ -39,7 +39,7 @@
 					  </tr>
 
 					  <tr>
-						<td><p> Register</p></td>
+						<td><p id="hint"> Register</p></td>
 						<td class="content">
 						  <p class="account" id="account_register">
 							<!-- AJAX post method -->
@@ -48,7 +48,7 @@
 					  </tr>
 
 					  <tr>
-						<td><p> Last Score</p></td>
+						<td><p id="hint"> Last Score</p></td>
 						<td class="content">
 						  <p class="account" id="account_last">
 							<!-- AJAX post method -->
@@ -57,7 +57,7 @@
 					  </tr>
 
 					  <tr>
-						<td><p> Best</p></td>
+						<td><p id="hint"> Best</p></td>
 						<td class="content">
 						  <p class="account" id="account_best">
 							<!-- AJAX post method -->

@@ -43,7 +43,7 @@
                     <td class="new_record">
                         <div class="panel">
                             <div class="panel-heading">New Record</div>
-                            <div class="panel-body" id="best_score"></div>
+                            <div class="panel-body" id="new_record"></div>
                         </div>
                     </td>
                 </tr>
