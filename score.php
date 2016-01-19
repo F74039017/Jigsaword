@@ -31,9 +31,11 @@
 	<div class="container game-container">
        <div class="row">
         	<div class="game-title">
-                <h1>Score</h1>
+                <h1>Leaderboard</h1>
                 <hr class="star-light">
             </div>
+
+            <br>
 
             <div class="game-table">
 			    <table class="table table-hover">

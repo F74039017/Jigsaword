@@ -21,6 +21,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/user_page.css">
 
     <!-- Plugin JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -41,7 +42,7 @@
 <body id="page-top" class="index">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container core-container">
+        <div class="container" id="navbar-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,9 +52,9 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand brand" href="#page-top">JIGSAWORDS</a>
+                <a class="navbar-brand brand" id="header" href="#page-top">JIGSAWORDS</a>
             </div>
-
+            <br><br><br>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">

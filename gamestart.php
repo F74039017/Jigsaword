@@ -4,16 +4,17 @@
 <header class="game animsition" id="gamestart_container">
     <div class="container start-container">
         <div class="row">
+            <br><br>
             <div class="game-title">
                 <h1>Chanllenge your power!</h1>
                 <hr class="star-light">
             </div>
 
-            <br><br>
+            <br>
 
             <span class="hint" style="font-size: 1.75em;">Find out more and more words as you can!</span>
 
-            <br><br><br>
+            <br><br>
 
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">

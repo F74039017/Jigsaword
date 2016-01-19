@@ -9,15 +9,10 @@ th {
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 td {
-	font-size: 1.2em;
-	text-align: center;
-}
-
-tbody {
 	font-size: 1.2em;
 	text-align: center;
 	-webkit-transition: all ease .5s;
@@ -25,7 +20,7 @@ tbody {
     transition: all ease .5s;
 }
 
-tbody:hover {
+td:hover {
 	color: black;
 	font-weight: bold;
 }

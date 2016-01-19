@@ -1,5 +1,6 @@
 <!-- Custom CSS -->
 <link href="css/block.css" rel="stylesheet">
+<link href="css/game.css" rel="stylesheet">
 
 <!-- Custom JavaScript -->
 <link rel="stylesheet" href="css/plugin/animsition.min.css">
@@ -167,6 +168,30 @@ $(function() {
     }
 });
 
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes;
+
+    function tick() {
+        var counter = document.getElementById("clock");
+        var current_minutes = mins - 1;
+
+        seconds--;
+        counter.innerHTML = (mins < 10 ? "0" : "") + current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        
+        if (seconds > 0) 
+            setTimeout(tick, 1000);
+        else {
+            if (mins > 1) 
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+        }
+    }
+
+    tick();
+}
+
+countdown(2);
+
 </script>
 
 <!-- Header -->
@@ -178,74 +203,107 @@ $(function() {
                 <hr class="star-light">
             </div>
 
-            <div class="game-table">
-                <div class="block1 block" id="s00">
-                    <h1>N</h1>
-                </div>
+            <br>
 
-                <div class="block1 block" id="s01">
-                    <h1>A</h1>
-                </div>
+            <table id="other-table">
+                <tr>
+                    <td id="clock_tab">Left time</td>
+                    <td id="clock_pill"><span id="clock">02:00</span></td>
 
-                <div class="block1 block" id="s02">
-                    <h1>M</h1>
-                </div>
+                    <td id="score_tab">Score</td>
+                    <td id="score_pill">0</td>
+                </tr>
+            </table>
 
-                <div class="block1 block" id="s03">
-                    <h1>E</h1>
-                </div><br>
+            <table id="game-table">
+                <tr>
+                    <td class="game-panel" rowspan="2">
+                         <div class="game-table">
+                            <div class="block1 block" id="s00">
+                                <h1>N</h1>
+                            </div>
 
-                <div class="block2 block" id="s10">
-                    <h1>E</h1>
-                </div>
+                            <div class="block1 block" id="s01">
+                                <h1>A</h1>
+                            </div>
 
-                <div class="block2 block" id="s11">
-                    <h1>F</h1>
-                </div>
+                            <div class="block1 block" id="s02">
+                                <h1>M</h1>
+                            </div>
 
-                <div class="block2 block" id="s12">
-                    <h1>G</h1>
-                </div>
+                            <div class="block1 block" id="s03">
+                                <h1>E</h1>
+                            </div><br>
 
-                <div class="block2 block" id="s13">
-                    <h1>H</h1>
-                </div><br>
+                            <div class="block2 block" id="s10">
+                                <h1>E</h1>
+                            </div>
 
-                <div class="block3 block" id="s20">
-                    <h1>I</h1>
-                </div>
+                            <div class="block2 block" id="s11">
+                                <h1>F</h1>
+                            </div>
 
-                <div class="block3 block" id="s21">
-                    <h1>J</h1>
-                </div>
-    
-                <div class="block3 block" id="s22">
-                    <h1>K</h1>
-                </div>
+                            <div class="block2 block" id="s12">
+                                <h1>G</h1>
+                            </div>
 
-                <div class="block3 block" id="s23">
-                    <h1>L</h1>
-                </div><br>
+                            <div class="block2 block" id="s13">
+                                <h1>H</h1>
+                            </div><br>
 
-                <div class="block4 block" id="s30">
-                        <h1>M</h1>
-                </div>
+                            <div class="block3 block" id="s20">
+                                <h1>I</h1>
+                            </div>
 
-                <div class="block4 block" id="s31">
-                    <h1>N</h1>
-                </div>
+                            <div class="block3 block" id="s21">
+                                <h1>J</h1>
+                            </div>
+                
+                            <div class="block3 block" id="s22">
+                                <h1>K</h1>
+                            </div>
 
-                <div class="block4 block" id="s32">
-                    <h1>O</h1>
-                </div>
-    
-                <div class="block4 block" id="s33">
-                    <h1>P</h1>
-                </div>
-            </div>
-            
-            <p>Which = <span id="which_flag">0</span></p>
-            <p>Your Word = <span id="select_word"></span></p>
+                            <div class="block3 block" id="s23">
+                                <h1>L</h1>
+                            </div><br>
+
+                            <div class="block4 block" id="s30">
+                                    <h1>M</h1>
+                            </div>
+
+                            <div class="block4 block" id="s31">
+                                <h1>N</h1>
+                            </div>
+
+                            <div class="block4 block" id="s32">
+                                <h1>O</h1>
+                            </div>
+                
+                            <div class="block4 block" id="s33">
+                                <h1>P</h1>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td class="list-panel">
+                        <form role="form">
+                            <div class="panel">
+                                <div class="panel-heading">History list</div>
+                                <textarea class="form-control" rows="9" id="word-list"></textarea>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="find-panel">
+                        <div class="panel">
+                            <div class="panel-heading">Your word</div>
+                            <div class="panel-body"><span id="select_word"></span></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </header>
