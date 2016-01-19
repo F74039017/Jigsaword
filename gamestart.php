@@ -21,6 +21,8 @@
                     <div class="col-lg-8 col-lg-offset-2 text-center">
                         <div class="form-group col-xs-12 animsition" id="game-start">
                             <a class="btn btn-outline btn-lg btn-start" id="game_start_btn" href="#">Start!</a>
+                            <a class="btn btn-outline btn-lg btn-start" id="blank_btn" href="#" style="visibility: hidden;">Blank</a>
+                            <a class="btn btn-outline btn-lg btn-start" id="rule_btn" href="#">Rule</a>
                         </div>
                     </div>
                 </div>
@@ -28,3 +30,21 @@
         </div>
     </div>
 </header>
+<div class="modal fade" id="rule_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Rule</h4>
+            </div>
+            <div class="modal-body">
+                blah blah~
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

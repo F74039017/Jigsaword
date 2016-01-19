@@ -5,7 +5,6 @@
     $command = $_POST['command'];	// add and get
 
     if($command=="get") {
-    	$id = $_POST['id'];
     	$maps;
     	$query = mysql_query("SELECT id, matrix FROM map");
         while($result = mysql_fetch_array($query)) {

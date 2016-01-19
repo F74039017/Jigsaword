@@ -77,58 +77,59 @@
 	</header>
 
 	<div class="modal fade" id="changePWD_modal">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h4 class="modal-title">Change Password</h4>
-			</div>
-			<div class="modal-body">
-		    	<div class="container card-container">
-		            <div class="row">
-		                <div class="col-lg-12">
-		                    <p id="title">Change password</p>
-		                    <br>
-		                    <form class="form-signin" action="updatepassword.php" method="post">
-		                    <span id="reauth-email" class="reauth-email"></span>  
-		                    <table class="account-table">
-			                    <tbody class="account-table-body">
-				                    <tr>
-				                        <td><p> Current password</p></td>
-				                        <td class="content">
-				                        	<p class="account account-currentpass">
-				                        	<input id="cur_pass" name="currentpass" type="password" id="inputCurrentPass" class="form-control" placeholder="Current password" required>
-				                        	</p>
-				                        </td>
-				                    </tr>
-				                    <tr>
-				                        <td><p> New password</p></td>
-				                        <td class="content">
-				                        	<p class="account account-newpass">
-				                        	<input id="new_pass" name="newpass" type="password" id="inputNewPass" class="form-control" placeholder="New password" required>
-				                        	</p>
-				                        </td>
-				                    </tr>
-				                    <tr>
-				                        <td><p> Confirm password</p></td>
-				                        <td class="content">
-				                            <p class="account account-confirmpass">
-				                            <input id="con_pass" name="conformpass" type="password" id="inputConfirmPass" class="form-control" placeholder="Confirm password" required>
-				                            </p>
-				                        </td>
-				                    </tr>
-			                    </tbody>
-		                    </table>
-		                </form>
-		            </div>
-		        </div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal" id="closePWD_btn">Close</button>
-				<button type="button" class="btn btn-primary" data-dismiss="modal" id="savePWD_btn">Save changes</button>
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Change Password</h4>
+				</div>
+				<div class="modal-body">
+			    	<div class="container card-container">
+			            <div class="row">
+			                <div class="col-lg-12">
+			                    <p id="title">Change password</p>
+			                    <br>
+			                    <form class="form-signin" action="updatepassword.php" method="post">
+			                    <span id="reauth-email" class="reauth-email"></span>  
+			                    <table class="account-table">
+				                    <tbody class="account-table-body">
+					                    <tr>
+					                        <td><p> Current password</p></td>
+					                        <td class="content">
+					                        	<p class="account account-currentpass">
+					                        	<input id="cur_pass" name="currentpass" type="password" id="inputCurrentPass" class="form-control" placeholder="Current password" required>
+					                        	</p>
+					                        </td>
+					                    </tr>
+					                    <tr>
+					                        <td><p> New password</p></td>
+					                        <td class="content">
+					                        	<p class="account account-newpass">
+					                        	<input id="new_pass" name="newpass" type="password" id="inputNewPass" class="form-control" placeholder="New password" required>
+					                        	</p>
+					                        </td>
+					                    </tr>
+					                    <tr>
+					                        <td><p> Confirm password</p></td>
+					                        <td class="content">
+					                            <p class="account account-confirmpass">
+					                            <input id="con_pass" name="conformpass" type="password" id="inputConfirmPass" class="form-control" placeholder="Confirm password" required>
+					                            </p>
+					                        </td>
+					                    </tr>
+				                    </tbody>
+			                    </table>
+			                </form>
+			            </div>
+			        </div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal" id="closePWD_btn">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="savePWD_btn">Save changes</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>

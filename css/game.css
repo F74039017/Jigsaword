@@ -58,6 +58,7 @@
 
 #word-list {
   background-color: rgba(0, 148, 148, 0.7);
+  resize: none;
 }
 
 .find-panel {
