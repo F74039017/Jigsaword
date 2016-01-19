@@ -54,10 +54,10 @@
             <div class="col-lg-12">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <div class="form-group col-xs-12 animsition" id="game-start">
-                            <a class="btn btn-outline btn-lg btn-start" id="game_start_btn" href="#">Again</a>
-                            <a class="btn btn-outline btn-lg btn-start" id="blank_btn" href="#" style="visibility: hidden;">Blank</a>
-                            <a class="btn btn-outline btn-lg btn-start" id="rule_btn" href="#">Rank</a>
+                        <div class="form-group col-xs-12 animsition">
+                            <a class="btn btn-outline btn-lg btn-start" id="again_btn" href="#">Again</a>
+                            <a class="btn btn-outline btn-lg btn-start" href="#" style="visibility: hidden;">Blank</a>
+                            <a class="btn btn-outline btn-lg btn-start" id="rank_btn" href="#">Rank</a>
                         </div>
                     </div>
                 </div>
