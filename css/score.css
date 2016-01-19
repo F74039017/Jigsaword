@@ -1,4 +1,8 @@
 #score_container {
+	margin-top: 20vh;
+}
+
+#score_table_container {
 	height: 75vh;
 	overflow-y: auto;
 }
