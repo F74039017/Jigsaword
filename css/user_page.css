@@ -15,32 +15,33 @@ body {
 }
 
 ::selection {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 #main_container {
-  width: 100%;
+    width: 100%;
 }
 
 .navbar {
-  margin-bottom: -2vh;
+    margin-bottom: -1.5em;
+    margin-top: -2em;
 }
 
 #header {
-  font-size: 2em;
-  padding-left: -5vw;
-  width: 180px;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
+    font-size: 2em;
+    padding-left: -5vw;
+    width: 180px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
 }
 
 #header:hover {
-  color: yellow;
+    color: yellow;
 }
 
 .tab_link {
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 /* Add a gray background color and some padding to the footer */

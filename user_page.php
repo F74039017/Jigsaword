@@ -94,7 +94,7 @@
 
 	<footer class="container-fluid text-center">
 		<div class='footer-copyright'>
-			<strong>Copyright &copy; David Lu</strong>
+			<strong>Copyright &copy;</strong>
 			<br>
 			2015 National Chung Kung University Computer Science and Information Egineering.
 			<div class='footer-background'>WEB APPLICATION AND PROGRAMMING</div>

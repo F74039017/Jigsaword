@@ -211,23 +211,9 @@ section.signin a.active {
     color: #2c3e50;
 }
 
-section.rule {
+section.register {
     color: #fff;
     background: #18bc9c;
-}
-
-section.rule a,
-section.rule a:hover,
-section.rule a:focus,
-section.rule a:active,
-section.rule a.active {
-    outline: 0;
-    color: #fff;
-}
-
-section.register {
-    color: #2c3e50;
-    background: #fff;
 }
 
 section.register a,
@@ -236,6 +222,7 @@ section.register a:focus,
 section.register a:active,
 section.register a.active {
     outline: 0;
+    color: #fff;
 }
 
 @media(max-width:767px) {
@@ -421,6 +408,31 @@ section.register a.active {
 
 form .row:first-child .floating-label-form-group {
     border-top: 1px solid #eee;
+}
+
+.register ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+    opacity: 0.7;
+}
+.register :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity: 0.7;
+}
+.register ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity: 0.7;
+}
+.register :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+    opacity: 0.7;
+}
+.register :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color: #fff;
+    opacity: 0.7;
+}
+
+.register {
+    color: rgba(255, 255, 255, 1);
 }
 
 footer {

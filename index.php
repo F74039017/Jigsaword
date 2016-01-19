@@ -153,37 +153,13 @@
         </div>
     </section>
 
-    <!-- Rule Section -->
-    <section class="rule" id="rule">
-        <div class="container rule-container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Rules</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-
-            <br>
-
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>GAME RULE</p>
-                </div>
-
-                <div class="col-lg-4">
-                    <p>GAME RULE</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Register Section -->
     <section class="register" id="register">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Register</h2>
-                    <hr class="star-primary">
+                    <hr class="star-light">
                 </div>
             </div>
 
@@ -195,7 +171,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input name="username" type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                <input name="username" type="text" class="form-control register" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -203,7 +179,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
-                                <input name="email" type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <input name="email" type="email" class="form-control register" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -211,14 +187,14 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Password</label>
-                                <input name="password" type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your phone number.">
+                                <input name="password" type="password" class="form-control register" placeholder="Password" id="password" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Confirm password</label>
-                                <input name="confirmpassword" type="password" class="form-control" placeholder="Confirm password" id="password" required data-validation-required-message="Please enter your phone number.">
+                                <input name="confirmpassword" type="password" class="form-control register" placeholder="Confirm password" id="password" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -227,8 +203,8 @@
 
                         <div class="col-lg-8 col-lg-offset-2 text-center">
                             <div class="form-group col-xs-12">
-                                <input name="submit" type="submit" class="btn btn-inline btn-lg btn-send" id="submit" value="Send">
-                                <input name="clear" type="reset" class="btn btn-inline btn-lg btn-clear" id="clear" value="Clear">
+                                <input name="submit" type="submit" class="btn btn-outline btn-lg btn-send" id="submit" value="Send">
+                                <input name="clear" type="reset" class="btn btn-outline btn-lg btn-clear" id="clear" value="Clear">
                             </div>
                         </div>
                     </form>

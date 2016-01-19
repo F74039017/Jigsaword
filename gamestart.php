@@ -4,7 +4,6 @@
 <header class="game animsition" id="gamestart_container">
     <div class="container start-container">
         <div class="row">
-            <br><br>
             <div class="game-title">
                 <h1>Chanllenge your power!</h1>
                 <hr class="star-light">

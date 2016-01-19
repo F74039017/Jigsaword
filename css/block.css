@@ -25,10 +25,10 @@
 .block {
     border: solid 3px #fff;
     display: inline-block;
-    height: 10vh;
-    width: 10vw;
+    height: 1.5em;
+    width: 1.5em;
     margin: 0.1em;
-    padding: 0.1em;
+    padding-bottom: -0.5em;
     font-size: 60px;
     font-weight: bold;
     color: #fff;

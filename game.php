@@ -12,7 +12,7 @@
     <div class="container game-container" display="none">
         <div class="row">
             <div class="game-title">
-                <h1>Word is power!</h1>
+                <h1 class="game_title">Word is power!</h1>
                 <hr class="star-light">
             </div>
 
