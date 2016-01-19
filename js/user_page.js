@@ -1,6 +1,9 @@
 $(document).ready(function() {
     // load home page by default
-    $("#main_container").load("gamestart.php");
+    $("#main_container").load("gamestart.php", function(){
+        $("#gamestart_container").hide().fadeIn(1000);
+    });
+
     var last_tab = $("#game_tab");
 
     $(".tab_link").click(function() {
@@ -8,7 +11,9 @@ $(document).ready(function() {
         last_tab.removeClass("active").addClass("passive");
 
         if (tab_name == "Game") {
-            $("#main_container").load("gamestart.php");
+            $("#main_container").load("gamestart.php", function(){
+                $("#gamestart_container").hide().fadeIn(1000);
+            });
         }
         else if (tab_name == "Score") {
             $("#main_container").load("score.php");
