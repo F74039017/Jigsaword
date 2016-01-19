@@ -21,6 +21,9 @@ $(document).ready(function(){
         else if(tab_name == "Sign out") {
             window.location.assign("index.php");
         }
+        else if(tab_name == "Word Bank") {
+            $("#main_container").load("wordbank.php")
+        }
         last_tab = $(this).parent();
         last_tab.removeClass("passive").addClass("active");
     });

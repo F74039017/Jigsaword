@@ -53,6 +53,9 @@
 						<a class="navbar navbar-link tab_link" href="#">Personal</a>
 					</li>
 					<li class="navbar-page" id="game_tab">
+						<a class="navbar navbar-link tab_link" href="#">Word Bank</a>
+					</li>
+					<li class="navbar-page" id="game_tab">
 						<a class="navbar navbar-link tab_link" href="#">Sign out</a>
 					</li>
                 </ul>
