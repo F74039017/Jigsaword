@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     overflow-x: hidden;
     -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -12,6 +6,11 @@ body {
     -o-user-select: none;
     user-select: none;  
     cursor: default;
+}
+
+::-moz-selection { 
+    background-color: #BA9EB0; 
+    color: #ffffff;
 }
 
 ::selection {
@@ -32,7 +31,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: yellow;
+    color: #18bc9c;
 }
 
 h1,
@@ -42,7 +41,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -62,7 +61,7 @@ hr.star-primary:after {
     display: inline-block;
     position: relative;
     top: -.8em;
-    padding: 0 .25em;
+    padding: 0.25em;
     font-family: FontAwesome;
     font-size: 2em;
 }
@@ -108,7 +107,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -143,7 +142,6 @@ header .intro-text .skills {
 
     .navbar-fixed-top .navbar-brand {
         font-size: 2em;
-        color: #fff;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
@@ -162,8 +160,6 @@ header .intro-text .skills {
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    color: #fff;
-    background: #2c3e50;
 }
 
 .navbar a:focus {
@@ -190,10 +186,6 @@ header .intro-text .skills {
 
 .navbar-header {
     font-size: 20px;
-}
-
-.navbar-link {
-    color: #fff;
 }
 
 section {
@@ -313,10 +305,11 @@ section.register a.active {
     }
 }
 
+/* Button format - outline */
 .btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
-    font-size: 35px;
+    font-size: 2em;
     font-weight: bold;
     color: #fff;
     background: #18bc9c;
@@ -332,11 +325,12 @@ section.register a.active {
     background: #fff;
 }
 
+/* Button format - inline*/
 .btn-inline {
     margin-top: 15px;
     margin-left: 15px;
     border: solid 2px #18bc9c;
-    font-size: 35px;
+    font-size: 2em;
     font-weight: bold;
     color: #18bc9c;
     background: #fff;
@@ -352,8 +346,25 @@ section.register a.active {
     background: #18bc9c;
 }
 
-.btn-send {
+/* Special button setting */
+.btn-guide:link {
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.btn-send[value = "Send"],
+.btn-signin[value = "Sign in"] {
     margin-right: 20px;
+    font-size: 2em;
+}
+
+.btn-clear[value = "Clear"] {
+    margin-right: 20px;
+    font-size: 2em;
+}
+
+.btn-start[value = "Start!"] {
+    font-size: 2em;
 }
 
 .floating-label-form-group {

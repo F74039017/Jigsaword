@@ -1,22 +1,25 @@
-.container {
-    position: relative;
-    overflow-x: hidden;
-}
-
-body {
-  background-image: url("../img/background2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 500px;
-}
-
 /*disable text selection for game*/
 body {
-      -webkit-user-select: none;  /* Chrome all / Safari all */
-      -moz-user-select: none;     /* Firefox all */
-      -ms-user-select: none;      /* IE 10+ */
-      -o-user-select: none;
-      user-select: none;          
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;     
+  cursor: default;     
+}
+
+::-moz-selection { 
+    background-color: #BA9EB0; 
+    color: #ffffff;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+.core-container {
+  position: relative;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -27,14 +30,13 @@ body {
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar-brand {
-  font-size: 24px;
+.brand {
+  font-size: 1.5em;
   padding-left: 30px;
   width: 180px;
 }
 
 .navbar-link {
-  /*color: rgba(0, 0, 0);*/
   font-size: 16px;
   transition-property: color;
   transition-duration: 0.25s;
@@ -48,36 +50,23 @@ body {
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  box-sizing: border-box;
-  bottom: 0;
-  padding: 0;
-  width: 100%;
-  position: absolute;
-  height: 100px;
-  clear: both;
+    color: #fff;
 }
 
-.footer-copyright {
-text-align: left;
-font-family: Georgia;
-font-size: 14px;
-font-style: bold;
-padding-top: 12px;
-padding-left: 20px;
-line-height: 20px;
+footer h3 {
+    margin-bottom: 30px;
 }
 
-.footer-background {
-font-family: Arial Black;
-color: rgba(255, 255, 255, 0.6);
+footer .footer-above {
+    padding-top: 50px;
+    background-color: #2c3e50;
+}
 
-font-size: 30px;
-text-align: right;
-padding-top: 10px;
-padding-right: 10px;
-padding-bottom: 5px;
-line-height: -100px;
-z-index: 1;
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
 }

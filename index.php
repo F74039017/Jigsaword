@@ -1,29 +1,48 @@
 <?php
-  include('login.php');
-  include('registeraccount.php');
-  if($_SESSION['login_user']!="wrong"){ // check login error
-    $_SESSION['login_user'] = "";
-  }
+    include('login.php');
+    include('registeraccount.php');
+    if ($_SESSION['login_user']!="wrong") { 
+        // check login error
+        $_SESSION['login_user'] = "";
+    }
 ?>
 
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-  <title>Jigsawords</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jigsawords</title>
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Plugin CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="css/plugin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/plugin/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- Plugin JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+    <script src="js/plugin/jquery.js"></script>
+    <script src="js/plugin/bootstrap.min.js"></script>
+    <script src="js/plugin/classie.js"></script>
+    <script src="js/plugin/cbpAnimatedHeader.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/core.js"></script>
+
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -35,17 +54,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
                 <a class="navbar-brand" href="#page-top">JIGSAWORDS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="navbar-page page-scroll">
-                        <a href="#rule">Rule</a>
+                    <li class="hidden">
+                        <a href="#page-top"></a>
                     </li>
 
-                    <li class="navbar-page page-scroll">
+                    <li class="page-scroll">
+                        <a href="#signin">Sign in</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#rule">Rules</a>
+                    </li>
+
+                    <li class="page-scroll">
                         <a href="#register">Register</a>
                     </li>
                 </ul>
@@ -55,7 +83,6 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div id="main">
     <!-- Header -->
     <header>
         <div class="container">
@@ -64,11 +91,15 @@
                     <img class="img-responsive" src="img/profile.png" alt="">
                     <div class="intro-text">
                         <span class="name">Word is power!</span>
+
                         <br>
+
                         <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
-                            <a href="#signin" class="btn-outline btn-lg">SIGN IN</a>
+                            <a href="#signin" class="btn btn-outline btn-lg btn-guide">Start</a>
                         </div>
+
                         <br>
+
                         <hr class="star-light">
                         <span class="skills">Find out more and more words as you can!</span>
                     </div>
@@ -79,13 +110,16 @@
 
      <!-- Sign in Section -->
     <section class="signin" id="signin">
-        <div class="container">
+        <div class="container signin-container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Sign in</h2>
                     <hr class="star-primary">
                 </div>
             </div>
+
+            <br>
+
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <form name="sentMessage" id="contactForm" action="login.php" method="post">
@@ -96,6 +130,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
+
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Password</label>
@@ -105,9 +140,11 @@
                         </div>
 
                         <br>
-                        <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                        <div class="col-lg-offset-2 text-center">
                             <div class="form-group col-xs-12">
-                                <input name="submit" type="submit" class="btn-inline btn-lg" id="submit" value="Sign in">
+                                <input name="submit" type="submit" class="btn btn-inline btn-lg btn-signin" id="submit" value="Sign in">
+                                <input name="clear" type="reset" class="btn btn-inline btn-lg btn-clear" id="clear" value="Clear">
                             </div>
                         </div>
                     </form>
@@ -118,17 +155,21 @@
 
     <!-- Rule Section -->
     <section class="rule" id="rule">
-        <div class="container">
+        <div class="container rule-container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Rules</h2>
                     <hr class="star-light">
                 </div>
             </div>
+
+            <br>
+
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
                     <p>GAME RULE</p>
                 </div>
+
                 <div class="col-lg-4">
                     <p>GAME RULE</p>
                 </div>
@@ -145,6 +186,9 @@
                     <hr class="star-primary">
                 </div>
             </div>
+
+            <br>
+            
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <form name="sentMessage" id="contactForm" action="registeraccount.php" method="post">
@@ -155,6 +199,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
+
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
@@ -162,6 +207,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
+
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Password</label>
@@ -176,12 +222,13 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
+
                         <br>
-                        <div id="register"></div>
+
                         <div class="col-lg-8 col-lg-offset-2 text-center">
                             <div class="form-group col-xs-12">
-                                <input name="submit" type="submit" class="btn-inline btn-lg" id="submit" value="Send">
-                                <input name="clear" type="reset" class="btn-inline btn-lg" id="clear" value="Clear">
+                                <input name="submit" type="submit" class="btn btn-inline btn-lg btn-send" id="submit" value="Send">
+                                <input name="clear" type="reset" class="btn btn-inline btn-lg btn-clear" id="clear" value="Clear">
                             </div>
                         </div>
                     </form>
