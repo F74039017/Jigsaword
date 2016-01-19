@@ -5,5 +5,9 @@
 }
 
 .alphabet {
-	margin-top: 7px;
+	margin-top: 10px;
+}
+
+#submit {
+  font-size: 2em;
 }
