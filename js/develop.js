@@ -9,8 +9,6 @@ $(document).ready(function(){
 
 		/* get answer */
 		var ans = [];
-		ans.push("Hello");
-		ans.push("World");
 
 		$.post( "modifyMap.php",{
 				command: "add",
@@ -25,4 +23,8 @@ $(document).ready(function(){
 		var ch = $(this).val();
 		$(this).val(ch.toUpperCase());
 	});
+
+	$(".matrix_element").focus(function(){
+		$(this).val("");
+	});	
 });

@@ -88,6 +88,7 @@ $(function() {
         }
     });
                     
+    var add_score = 0;
     $("#game_header").mouseup(function(e) {
         // Left mouse button was released, clear flag
         if (e.which === 1) 
@@ -138,7 +139,6 @@ $(function() {
             function exist_reponse () {
                 $("#select_word").css("color", "green");
                         
-                var add_score = 0;
                 if($("#word-list").val()=="") {
                     $("#word-list").append(word);
                     add_score += 13*word.length;
