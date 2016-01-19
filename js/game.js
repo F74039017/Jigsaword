@@ -207,7 +207,7 @@ $(function() {
 });
 
 function countdown(minutes) {
-    var seconds = 2;
+    var seconds = 5;
     var mins = 0;
 
     function tick() {
@@ -231,6 +231,14 @@ function countdown(minutes) {
 }
 
 function gameover () {
+    var score = $("#score_pill").html();
+    $.post( "modifyPersonal.php",{
+            command: "update_score",
+            score: score
+        }, function(data, status){
+             
+        });
+
     $("#main_container").load("gameover.php");
 }
 

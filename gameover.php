@@ -27,34 +27,23 @@
                     <td class="curr_score">
                         <div class="panel">
                             <div class="panel-heading">Score</div>
-                            <div class="panel-body">1000</div>
+                            <div class="panel-body" id="curr_score"></div>
                         </div>
                     </td>
                 </tr>
-
-                <tr>
-                    <td class="curr_rank">
-                        <div class="panel">
-                            <div class="panel-heading">Rank</div>
-                            <div class="panel-body">2</div>
-                        </div>
-                    </td>
-                </tr>
-
                 <tr>
                     <td class="best_score">
                         <div class="panel">
                             <div class="panel-heading">Best score</div>
-                            <div class="panel-body">1000</div>
+                            <div class="panel-body" id="best_score"></div>
                         </div>
                     </td>
                 </tr>
-
-                 <tr>
-                    <td class="best_rank">
+                <tr>
+                    <td class="new_record">
                         <div class="panel">
-                            <div class="panel-heading">Best rank</div>
-                            <div class="panel-body">1</div>
+                            <div class="panel-heading">New Record</div>
+                            <div class="panel-body" id="best_score"></div>
                         </div>
                     </td>
                 </tr>
