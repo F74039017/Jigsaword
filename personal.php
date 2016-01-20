@@ -2,7 +2,6 @@
 	include('changepassword.php'); 
   ?>
 
-	<link href="css/block.css" rel="stylesheet">
 	<link href="css/register.css" rel="stylesheet">
 	<link href="css/stylesheet.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +10,7 @@
 
 	<header>
 	  <div class="container card-container">
+	  		<br><br><br><br><br><br><br><br><br>
 			<div class="row">
 				<div class="col-lg-12">
 					<p id="title">Account information</p>
@@ -89,7 +89,6 @@
 			    	<div class="container card-container">
 			            <div class="row">
 			                <div class="col-lg-12">
-			                    <p id="title">Change password</p>
 			                    <br>
 			                    <form class="form-signin" action="updatepassword.php" method="post">
 			                    <span id="reauth-email" class="reauth-email"></span>  

@@ -5,6 +5,13 @@
 	text-align: center;
 }
 
+.game-container {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: -10em;
+  padding-top: -10em;
+}
+
 th {
 	font-size: 2em;
 	font-weight: bold;

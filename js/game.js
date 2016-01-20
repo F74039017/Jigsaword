@@ -209,8 +209,8 @@ $(function() {
 });
 
 function countdown(minutes) {
-    var seconds = 5;
-    var mins = 0;
+    var seconds = 60;
+    var mins = minutes;
 
     function tick() {
         var counter = document.getElementById("clock");
@@ -238,13 +238,14 @@ function gameover () {
     $.post( "modifyPersonal.php",{
             command: "update_score",
             score: score
-        }, function(data, status){
-            if(data=="true") {
+        }, function(data, status) {
+            if (data == "true") {
                 new_record = "O";
             }
             else {
                 new_record = "X";
             }
+
             $("#main_container").load("gameover.php", {
                 score: score,
                 new_record: new_record
@@ -252,4 +253,4 @@ function gameover () {
         });
 }
 
-countdown(1);
+countdown(2);

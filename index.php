@@ -52,7 +52,6 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </button>
 
                 <a class="navbar-brand" href="#page-top">JIGSAWORDS</a>
@@ -67,10 +66,6 @@
 
                     <li class="page-scroll">
                         <a href="#signin">Sign in</a>
-                    </li>
-
-                    <li class="page-scroll">
-                        <a href="#rule">Rules</a>
                     </li>
 
                     <li class="page-scroll">
@@ -98,7 +93,7 @@
                             <a href="#signin" class="btn btn-outline btn-lg btn-guide">Start</a>
                         </div>
 
-                        <br>
+                        <br><br><br><br><br>
 
                         <hr class="star-light">
                         <span class="skills">Find out more and more words as you can!</span>
@@ -141,7 +136,7 @@
 
                         <br>
 
-                        <div class="col-lg-offset-2 text-center">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
                             <div class="form-group col-xs-12">
                                 <input name="submit" type="submit" class="btn btn-inline btn-lg btn-signin" id="submit" value="Sign in">
                                 <input name="clear" type="reset" class="btn btn-inline btn-lg btn-clear" id="clear" value="Clear">

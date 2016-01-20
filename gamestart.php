@@ -39,7 +39,7 @@
                 <h4 class="modal-title">Rule</h4>
             </div>
             <div class="modal-body">
-                blah blah~
+                每一回合都包含雙字母與三字母字牌、主題單字以及速度賽等挑戰。獲得勝利的方式不只一種，您可以當找出最多單字的那個人、獲得最高分、找出最長的單字、擊敗您的勁敵或是打破自己的高分記錄。您想怎麼獲勝，就怎麼獲勝！&nbsp;
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
