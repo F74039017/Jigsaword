@@ -9,7 +9,8 @@ $(function() {
              var k=0;
              for(var i=0; i<4; i++)
                 for(var j=0; j<4; j++)
-                    $("#s"+i+j).html("<h1>"+map_info.map[k++]+"</h1>")
+                    $("#s"+i+j).html("<h1>"+map_info.map[k++]+"</h1>");
+            $("#map_hidden").html(map_info.id);
         });
 
     const default_bg = "#18bc9c";
@@ -208,7 +209,7 @@ $(function() {
 });
 
 function countdown(minutes) {
-    var seconds = 20;
+    var seconds = 5;
     var mins = 0;
 
     function tick() {
@@ -233,7 +234,6 @@ function countdown(minutes) {
 
 function gameover () {
     var score = $("#score_pill").html();
-    var wordlist = $("#word-list").html();
     var new_record = "";
     $.post( "modifyPersonal.php",{
             command: "update_score",
@@ -247,8 +247,7 @@ function gameover () {
             }
             $("#main_container").load("gameover.php", {
                 score: score,
-                new_record: new_record,
-                wordlist: wordlist
+                new_record: new_record
             });
         });
 }

@@ -6,6 +6,12 @@
 
 <html lang="en">
 
+<style type="text/css">
+    #map_hidden {
+        display: none;
+    }
+</style>
+
 <head>
     <title>Jigsawords</title>
 
@@ -100,6 +106,7 @@
 			<div class='footer-background'>WEB APPLICATION AND PROGRAMMING</div>
 		</div>
 	</footer>
+    <span id="map_hidden"></span>
 
 </body>
 

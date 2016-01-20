@@ -2,6 +2,15 @@
 <script src="js/gameover.js"></script>
 
 <link href="css/gameover.css" rel="stylesheet">
+<style type="text/css">
+	.inner_words {
+		color: blue;
+	}
+
+	.add_btns {
+		margin-left: 2em;
+	}
+</style>
 
 <header class="game animsition" id="gamestart_container">
     <div class="container start-container">
@@ -15,15 +24,13 @@
 
             <table>
                 <tr>
-                    <td class="list-panel" rowspan="4">
+                    <td class="list-panel" rowspan="4" id="words_container">
                         <form role="form">
                             <div class="panel">
-                                <div class="panel-heading">History list</div>
-                                <textarea class="form-control" rows="20" id="word-list" readOnly>
-                                	<?php 
-                                		echo '"' . trim($_REQUEST['wordlist']) . '"';
-                                	 ?>
-                                </textarea>
+                                <div class="panel-heading">Words list</div>
+                                <div id="words_list">
+                                	<!-- // insert by ajax -->
+                                </div>
                             </div>
                         </form>
                     </td>
@@ -68,7 +75,7 @@
                     <div class="col-lg-8 col-lg-offset-2 text-center">
                         <div class="form-group col-xs-12 animsition">
                             <a class="btn btn-outline btn-lg btn-start" id="again_btn" href="#">Again</a>
-                            <a class="btn btn-outline btn-lg btn-start" href="#" style="visibility: hidden;">Blank</a>
+                            <!-- <a class="btn btn-outline btn-lg btn-start" href="#" style="visibility: hidden;">Blank</a> -->
                             <a class="btn btn-outline btn-lg btn-start" id="rank_btn" href="#">Rank</a>
                         </div>
                     </div>

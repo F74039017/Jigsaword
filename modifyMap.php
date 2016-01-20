@@ -26,6 +26,13 @@
         $ret->id = $id;
         echo json_encode($ret);
     }
+    else if($command=="getIdAns") {
+        $id = $_POST['id'];
+        /* get map answer */
+        $query = mysql_query("SELECT answer FROM map WHERE id='$id'");
+        $result = mysql_fetch_array($query);
+        echo json_encode($result['answer']);
+    }
     else if($command=="add") {
 	    $map = $_POST['map'];
         $answer = $_POST['answer'];
